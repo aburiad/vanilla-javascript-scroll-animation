@@ -1,0 +1,540 @@
+/* ::-webkit-scrollbar{
+    width: 15px;
+    height: 150px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#f00,green);
+    border-radius: 50px;
+
+}
+nav {
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: .5s;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    transition: .3s;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.icon{
+    background-color: #f00;
+    height: 30px;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+}
+.icon #font{
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 768px){
+    .icon{
+        display: block;
+    }
+    .main_menu{
+        display: none;
+    }
+    nav ul li{
+        display: block;
+    }
+    .active{
+        display: block;
+    }
+}
+/* social icons effect  */
+.social_icons ul{
+    display: flex;
+}
+.social_icons ul::before{
+    position: absolute;
+    content: '\f4ef';
+    font-family: fontAwesome 5 Pro;
+    height: 64px;
+    width: 64px;
+    background: #000;
+    border-radius: 50px;
+    z-index: 9;
+}
+.social_icons ul:hover::before{
+    
+}
+.social_icons ul li{
+    list-style: none;
+    margin: 0 2px;
+    position: absolute;
+    transition: .8s;
+}
+.social_icons ul:hover li:nth-child(1) a{
+    transform: translateX(60px) rotate(360deg);
+    transition-delay: .8;
+}
+.social_icons ul:hover li:nth-child(2) a{
+    transform: translateX(125px) rotate(360deg);
+    transition-delay: .6;
+}
+.social_icons ul:hover li:nth-child(3) a{
+    transform: translateX(190px) rotate(360deg);
+    transition-delay: .4;
+}
+.social_icons ul:hover li:nth-child(4) a{
+    transform: translateX(260px) rotate(360deg);
+    transition-delay: .2;
+}
+.social_icons ul li a{
+    display: block;
+    height: 64px;
+    width: 64px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    line-height: 64px;
+    border-radius: 50px;
+    transition: .3s;
+}
+.social_icons ul li:hover:nth-child(1) a{
+    
+}
+/* image hover effect  */
+.image_box{
+    margin-top: 150px;
+    position: relative;
+    width: 270px;
+    height: 270px;
+    transition: .5s;
+    overflow: hidden;
+    box-shadow: 0 20px 25px rgb(0,0,0,0.1);
+}
+
+.image{
+    transition: .5s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.image img{
+    transition: .5s;
+}
+.image_box:hover .image img{
+    opacity: .6;
+
+}
+.image_box:hover .image{
+    transform: translateY(-100px);
+    transition: .5s;
+}
+.share_icons{
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.share_icons li{
+    list-style: none;
+    margin-right: 10px;
+}
+.share_icons li a{
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50px;
+    transition: .3s;
+    font-size: 14px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: .3s;
+}
+.image_box:hover .share_icons a{
+    transform: translateY(0);
+    opacity: 1;
+}
+.image_box:hover .share_icons li:nth-child(1) a{
+    transition-delay: 0s;
+}
+.image_box:hover .share_icons li:nth-child(2) a{
+    transition-delay: .2s;
+}
+.image_box:hover .share_icons li:nth-child(3) a{
+    transition-delay: .4s;
+}
+.image_box:hover .share_icons li:nth-child(4) a{
+    transition-delay: .6s;
+}
+.details{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 1;
+    transition: .5;
+    height: 100px;
+}
+
+/* custom select box  */
+.custom_select{
+    position: absolute;
+}
+.custom_select select{
+    width: 200px;
+    padding: 10px;
+    background: green;
+    -webkit-appearance: none;
+    outline: 0;
+    height: 60px;
+}
+.custom_select select option{
+    height: 15px;
+}
+.custom_select::before{
+    position: absolute;
+    content: "+";
+    right: 0;
+    background: #000;
+    width: 60px;
+    height: 60px;
+    z-index: 9;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.mainBox{
+    display: flex;
+}
+.column{
+    background: green;
+    margin: 0 15px;
+    padding: 15px;
+    margin: 10px;
+}
+
+
+.circle_one{
+    position: relative;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: rgb(19, 194, 19) #f00 green rgb(255, 0, 234);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: circluarOne 5s linear infinite;
+}
+@keyframes circluarOne{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* responsive block  */
+.mainBlock{
+    
+}
+.block{
+    background-color: #f00;
+    height: 300px;
+    width: 30.33%;
+    margin-right: 3px;
+    float: left;
+    transition: 1s;
+}
+@media (max-width:576px){
+    .block{
+        width: 100%;
+        transition: 1s;
+    }
+}
+
+.animation{
+    margin-top: 800px;
+    height: 100px;
+    width: 100px;
+    background: rgb(0, 255, 85);
+    animation: slideup 5s ease-out infinite;
+    transition: .3s;
+}
+
+@keyframes slideup{
+    0%{
+        opacity: 1;
+        transform: translateY(-100px);
+        transition: .3s;
+    }
+    100%{
+        opacity: 1;
+        transition: .3s;
+        transform: translateY(100px);
+
+        transform: none;
+    }
+}
+
+.bg{
+    background-color: green;
+    height: 100px;
+}
+.bg h1{
+    mix-blend-mode: screen;
+    background-color: #fff;
+    height: 10px;
+    width: 200px;
+} 
+
+a svg, a svg rect{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38%;
+    height: 30%;
+    fill: transparent;
+    transition: 1.5;
+    /* display: inline-block; */
+}
+a svg rect{
+    stroke: #f00;
+    stroke-width: 4;
+    stroke-dasharray: 490;
+    stroke-dashoffset: 490;
+    transition: 1.5;
+
+}
+a:hover svg rect{
+    width: 100%;
+    height: 100%;
+    transition: 1.5;
+
+}
+
+.onhover{
+    height: 300px;
+    width: 100%;
+    background-color: #f00;
+}
+
+.pre{
+    animation: anim 1s forwards;
+    position: absolute;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    background-color: darkcyan;
+}
+@keyframes anim{
+    0%{
+        background-color: rgb(14, 190, 190);
+    }
+    50%{
+        background-color: rgb(56, 221, 221);
+
+    }
+    100%{
+        display: none;
+        visibility: hidden;
+    }
+}
+.container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2,6fr);
+    grid-template-rows: repeat(3,300px);
+    grid-gap: 30px;
+}
+.items-01{
+    background-color: darkcyan;
+    vertical-align: middle;
+
+}
+
+/* moz select  */
+/* ::selection{
+    background-color: #f00;
+}
+::-webkit-scrollbar{
+    height: 50px;
+    width: 15px;
+
+} */
+::-webkit-scrollbar-thumb{
+    background-color: #f00;
+}
+/* effect css  */
+
+.effect{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: grid;
+    place-items: center;
+}
+.name{
+    color: #fff;
+    font-size: 100px;
+    user-select: none;
+}
+.smoke{
+    animation: smokeanim 2s forwards;
+    display: inline-block;
+    transition: .5s;
+
+}
+.name:hover span.smoke{
+    color: #f00;
+    transition: .5s;
+    background-color: ;
+}
+
+
+@keyframes smokeanim{
+    0%{
+        opacity: 0;
+        filter: blur(0);
+        transform: translate(0 0) rotate(0deg) scale(0);
+    }
+    50%{
+        opacity: 1;
+        filter: blur(20px);
+        transform: translate(300px -300px) rotate(90deg) scale(5);
+        transform: translateY(-300px);
+        transform: translateX(300px);
+        color: green;
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0);
+        color: green;
+
+    }
+}
+
+/* scroll css  */
+.scroll-appear{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ grid-template-rows: repeat(1,300px);
+ grid-gap: 30px;
+ margin-bottom: 100px;
+}
+.iteddm{
+    background-color: #000;
+    border: 10px solid #f00;
+}
+.newclass{
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    transform: translateY(30px);
+}
+.fadein{
+    opacity: 1;
+    transition: 1s all ease-in-out;
+    transform: translateY(0);
+}
+.main__one{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,300px);
+    grid-gap: 30px;
+}
+.myitem{
+    background-color: #000;
+}
+.transitionup{
+    animation: animtran 2s linear forwards;
+}
+@keyframes animtran{
+    0%{
+        transform: translateY(30px);
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.transform{
+    transform: translateY(-30px);
+}
+
+
+.accordionwrap_head{
+    background-color: #f00;
+    color: #fff;
+    padding: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    padding-left: 70px;
+    transition: .5s;
+    margin-bottom: 30px;
+}
+
+.accordionwrap_head::before{
+    position: absolute;
+    left: 20px;
+    background-color: salmon;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+}
+.accordionwrap.jjj .accordionwrap_head::after{
+    content: "-";
+}
+.accordionwrap_head::after{
+    position: absolute;
+    left: 20px;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "+";
+    text-align: center;
+}
+.accordionwrap_content{
+    box-shadow: rgba(0,0,0,.5) 0 10px 15px;
+    padding: 0;
+    transform: scaleY(0);
+    overflow-y: hidden;
+    transition: .3s;
+    height: 0;
+    transform-origin: top;
+
+}
+.accordionwrap.jjj .accordionwrap_content{
+    transform: scaleY(1);
+    padding: 20px;
+    transition: .3s;
+    height: auto;
+}
