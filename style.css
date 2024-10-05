@@ -1,21 +1,24 @@
 /* scroll css  */
-.scroll-appear{
+.scroll-appear {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(1,300px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 300px);
     grid-gap: 30px;
     margin-bottom: 100px;
-   }
-.iteddm{
+}
+
+.item {
     border: 5px solid #f00;
 }
-   .newclass{
-       opacity: 0;
-       transition: 1s all ease-in-out;
-       transform: translateY(30px);
-   }
-   .fadein{
-       opacity: 1;
-       transition: 1s all ease-in-out;
-       transform: translateY(0);
-   }
+
+.newclass {
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    transform: translateY(30px);
+}
+
+.fadein {
+    opacity: 1;
+    transition: 1s all ease-in-out;
+    transform: translateY(0);
+}
